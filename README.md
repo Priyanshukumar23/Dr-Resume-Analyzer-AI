@@ -1,59 +1,94 @@
-# DrCode Resume AI Bot & Web App (MERN Stack)
+🔥 DrCode Resume AI Bot & Web App (MERN Stack)
 
-DrCode Resume AI is a comprehensive tool built to analyze a given Resume against a Job Description, score the match out of 10, provide targeted advice, and generate a new, tailored PDF Resume. It fulfills the multi-tool selection requirement, allows Bot integration (Telegram), and offers a premium MERN stack web dashboard.
+DrCode Resume AI is an AI-powered system designed to analyze a resume against a given Job Description, generate an ATS-style score, identify missing skills, and produce a tailored, optimized PDF resume.
 
-## Features
-1. **Telegram Bot Integration**: A bot that interacts with the user sequentially (asks for JD, then Resume, then Tool, and replies with scoring and PDF).
-2. **Web Dashboard (MERN Stack)**: A visually stunning, glassmorphism-themed dark mode React frontend where users can use the service effortlessly.
-3. **Downloadable Tailored PDF**: Uses Gemini AI to re-write and highlight the best skills matched with the JD, outputting a polished PDF file.
-4. **Multiple Personas/Tools**: Option to select tools like "Standard Optimizer", "MERN Specialist" or "ATS Optimizer".
+The platform is accessible through both a Telegram Bot (primary interface) and a modern MERN-based web dashboard, providing a seamless and automated user experience.
 
-## Prerequisites
-- **Node.js**: Ensure Node.js is installed.
-- **MongoDB**: The app requires MongoDB. Start a local MongoDB instance on port `27017` (default) or change the `.env` value.
-- **Telegram Bot Token**: Get one via BotFather on Telegram.
-- **Google Gemini API Key**: Grab an API key from Google AI Studio.
+🚀 Features
+🤖 Telegram Bot (Core Feature)
+Interactive step-by-step flow (JD → Tool → Resume)
+Real-time ATS scoring and feedback
+Missing skills detection & suggestions
+Downloadable AI-generated optimized resume (PDF)
+🌐 Web Dashboard (MERN Stack)
+Modern React (Vite) UI with dark theme
+Upload resume & job description easily
+Visual display of score and suggestions
+Uses same backend as bot
+🧠 AI-Powered Analysis
+Resume vs JD matching
+Skill gap identification
+Smart suggestions for improvement
+Tailored resume rewriting
+📄 PDF Generation
+Automatically generates optimized resume
+Structured formatting for better readability
+Job-specific customization
+⚙️ Multiple Optimization Modes
+Standard Optimizer
+MERN Specialist
+ATS Optimizer
+🛠️ Tech Stack
+Frontend: React (Vite)
+Backend: Node.js, Express
+Database: MongoDB
+Bot: Telegram Bot API
+AI: Gemini API
+PDF Generation: PDFKit
+⚙️ Setup Instructions
+1️⃣ Backend & Telegram Bot
+cd backend
 
-## Setup Instructions
+Create a .env file:
 
-### 1. Setting up Backend & Bot
-1. Navigate to the `backend` folder:
-   ```bash
-   cd backend
-   ```
-2. The `.env` file is ready. You must edit `backend/.env` to include your API Keys:
-   ```env
-   PORT=5000
-   MONGODB_URI=mongodb://127.0.0.1:27017/drcodebot
-   TELEGRAM_BOT_TOKEN=YOUR_TELEGRAM_BOT_TOKEN
-   GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-   ```
-3. Start the backend Server (which also starts the Bot):
-   ```bash
-   node server.js
-   ```
+PORT=5000
+MONGODB_URI=mongodb://127.0.0.1:27017/drcodebot
+TELEGRAM_BOT_TOKEN=YOUR_TELEGRAM_BOT_TOKEN
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 
-### 2. Setting up the React Frontend
-Our frontend is a modern Vite+React app styled with pure CSS.
-1. Navigate to the `frontend` folder:
-   ```bash
-   cd frontend
-   ```
-2. Start the development server:
-   ```bash
-   npm run dev
-   ```
-3. Open the Local URL (usually `http://localhost:5173`) in your browser to see the beautiful web UI.
+Start server:
 
-### Usage instructions
-**Via Web UI:**
-- Paste your Job Description.
-- Select your Optimization Tool (e.g. MERN Specialist).
-- Upload your Resume as a standard PDF file.
-- Click "Optimize" to view your score out of 10, targeted advice, and a download link for your new resume.
+node server.js
+2️⃣ Frontend (React App)
+cd frontend
+npm install
+npm run dev
 
-**Via Telegram Bot:**
-- Add the bot using your Telegram Bot username.
-- Send `/start`.
-- Follow the interactive prompts (JD -> Tool -> PDF upload).
-- Receive the AI feedback directly as messages and the tailored Resume as a `.pdf` document!
+Open:
+
+http://localhost:5173
+🧪 Usage
+🌐 Web App
+Paste Job Description
+Select optimization mode
+Upload resume
+Get score, suggestions, and download PDF
+🤖 Telegram Bot
+Open bot using username
+Send /start
+Follow steps:
+Enter JD
+Select tool
+Upload resume
+Receive analysis + optimized resume
+🔐 Environment Variables
+
+⚠️ Important: Do NOT commit API keys
+
+Use .env and add to .gitignore
+
+🏆 Hackathon Project
+
+Built as part of DrCode Hackathon, demonstrating:
+
+Full-stack development (MERN)
+AI integration
+Telegram bot automation
+End-to-end product design
+🔥 What I Improved
+
+✔ Shortened sentences
+✔ Highlighted bot as main feature
+✔ Structured headings
+✔ Cleaner professional tone
+✔ Removed unnecessary repetition
